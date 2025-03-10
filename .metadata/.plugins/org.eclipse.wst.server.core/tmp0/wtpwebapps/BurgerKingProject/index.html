@@ -4,54 +4,50 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	h1{
-		color:orangered;
-		text-align:center;
-		font-size:80px;
-		width : 500px;
-		height : 360px;
-		border : 1px dotted lightpink;
-		margin : auto;
-		line-height : 360px;
-	
-	
+	* {
+		margin:0;
+		padding:0;
 	}
-	button{
-		width : 150px;
-		height : 40px;
-		font-weight : bold;
-		font-size : 18x;
-		border : none;
-		background : lightpink;
-		color : white;
-		border-radius : 8px;
-		
-		&:hover{
-			cursor : pointer;
-			background : rgba(120, 35, 35, 0.2);
-		}	
+	
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-image:url('https://mob-prd.burgerking.co.kr/images/menu/web/main/2025/01/06/ffefc938-62f3-4bc0-8a54-bad31db5d63a.png');
+	}
+	
+	h1 {
+		color: red;
+		text-align: center;
+		margin:auto;
+		font-size:200px;
+	}
+	
+	button {
+		width: 200px;
+		height: 50px;
+		margin: 50px;
+		font-weight: bold;
+		font-size: 20px;
+		background-color: red;
+		color: white;
+		border: none;
+		border-radius: 10px;
+	}
+	
+	button:hover {
+		cursor: pointer;
 	}
 </style>
 </head>
 <body>
-	<h1></h1>
+	<h1>이곳은 버거킹!</h1>
 	<hr>
 	<script>
-		// console.log(location);
-		// location 객체의
-		// href 속성에
-		// 요청 URL을 
-		// 대입해줍니다.
-		
-		function forwardRequestPage(){
-			location.href = 'http://127.0.0.1/bk/static/Request_Page.html'
+		function forwardRequestPage() {
+			location.href='http://127.0.0.1/bk/static/Request_Page.html'
 		}
 	</script>
-	<button onclick="forwardRequestPage();">주문하기</button>
+	<button onclick="forwardRequestPage()">주문하기</button>
 </body>
 </html>
-
-
-
-
-
