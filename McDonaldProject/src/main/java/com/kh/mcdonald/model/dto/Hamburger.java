@@ -6,14 +6,9 @@ public class Hamburger {
 	private int price;
 	private String brand;
 
-	
-	
-	
 	public Hamburger() {
 		super();
 	}
-	
-	
 
 	public Hamburger(String name, int price, String brand) {
 		super();
