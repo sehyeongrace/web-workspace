@@ -65,10 +65,10 @@ public class MemberDTO {
 
 	@Override
 	public String toString() {
-		return "MemberDTO [memberId=" + memberId + ", memberPw=" + memberPw + ", memberName=" + memberName + ", email="
-				+ email + "]";
+		return "MemberDTO [email=" + email + ", enrollDate=" + enrollDate + ", memberId=" + memberId + ", memberName="
+				+ memberName + ", memberPw=" + memberPw + "]";
 	}
-	
+
 	
 }
 

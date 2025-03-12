@@ -1,10 +1,11 @@
 package com.kh.mfw.member.model.service;
 
+import com.kh.mfw.member.model.dao.MemberDAO;
 import com.kh.mfw.member.model.dto.MemberDTO;
 
 public class MemberService {
 	
-	public void login(MemberDTO member) {
+	public MemberDTO login(MemberDTO member) {
 		
 		/* 
 		 로그인을 하는건데
@@ -24,7 +25,8 @@ public class MemberService {
 		DB에 갈 필요가 없는거 아님?
 		서비스단에서 유효성검사하기(Validation)
 		 */
-		new MemberDAO();
+		MemberDTO loginMember = new MemberDAO().login(member);
+		return loginMember;
 	}
 
 }
