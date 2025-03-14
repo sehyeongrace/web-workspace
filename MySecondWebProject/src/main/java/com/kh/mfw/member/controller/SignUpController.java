@@ -33,7 +33,7 @@ public class SignUpController extends HttpServlet {
 		MemberDTO member = new MemberDTO(memberId, memberPw, memberName, email, null);
 		
 		// 요청처리 -> 사용자가 입력한 값들을 저 멀리있는 DB Server의 KH_MEMBER테이블에 한 행 INSERT
-		int result = new MemberService().signUp(member);
+		int result = 0; //new MemberService().signUp(member);
 		
 		String path = request.getContextPath();
 		/*
