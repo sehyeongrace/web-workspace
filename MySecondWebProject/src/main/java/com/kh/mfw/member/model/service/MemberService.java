@@ -21,6 +21,33 @@ public class MemberService {
 		return loginMember;
 	}
 	
+	public int signUp(MemberDTO member) {
+		
+		// 의사 결정 코드
+		// 3차 유효성 검증 (Java)
+		// 4차 데이터 무결성을 위한 제약조건(DBMS)
+		// 아이디 중복 검사
+		
+		SqlSession sqlSession = getSqlSession();
+		
+		//boolean result = new MemberDAO().checkId(sqlSession, member.getMemberId());
+		if(new MemberDAO().checkId(sqlSession, member.getMemberId())) {
+			sqlSession.close();
+			return 0;
+		}
+		
+		int result = new MemberDAO().signUp(sqlSession, member);
+	
+		sqlSession.commit();
+		
+		sqlSession.close();
+		return result;
+	}
+	
+	
+	
+	
+	
 	
 	
 }

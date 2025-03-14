@@ -18,7 +18,22 @@ public class MemberDAO {
 		return sqlSession.selectOne("memberMapper.login", member);
 	}
 	
+	public boolean checkId(SqlSession sqlSession, String memberId) {
+		/*
+		int result = sqlSession.selectOne("memberMapper.checkId", memberId);
+		
+		if(result > 0) {
+			return true;
+		} else {
+			return false;
+		}
+		*/
+		return (Integer)sqlSession.selectOne("memberMapper.checkId", memberId) > 0 ? true : false;
+	}
 	
+	public int signUp(SqlSession sqlSession, MemberDTO member) {
+		return sqlSession.insert("memberMapper.signUp", member);
+	}
 	
 	
 	
