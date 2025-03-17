@@ -4,6 +4,11 @@
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	
+	<typeAliases>
+		<typeAlias type="com.kh.mfw.member.model.dto.MemberDTO" alias="memberDTO" />
+		<typeAlias type="com.kh.mfw.board.model.dto.BoardDTO" alias="boardDTO" />
+	</typeAliases>
+	
 	<!-- 
 		environments : MyBatis를 이용해서 우리가 연동할 DBMS의 정보를 등록하는 태그
 	 -->
@@ -37,6 +42,7 @@
 	 <!--  mappers : 실행할 SQL문을 기록해둔 mapper파일을 등록 -->
 	 <mappers>
 	 	<mapper resource="/mappers/member-mapper.xml" />
+	 	<mapper resource="/mappers/board-mapper.xml" />
 	 </mappers>
 	 
 	 
